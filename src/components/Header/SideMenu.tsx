@@ -46,28 +46,40 @@ export function SideMenu({ isOpen, setIsOpen }: SideMenuProps) {
             >
               <Button
                 variant="link"
-                onClick={() => push("/")}
+                onClick={() => {
+                  handleOnClose();
+                  push("/");
+                }}
                 size="lg"
               >
                 Home
               </Button>
               <Button
                 variant="link"
-                onClick={() => push("/about")}
+                onClick={() => {
+                  handleOnClose();
+                  push("/");
+                }}
                 size="lg"
               >
                 Sobre
               </Button>
               <Button
                 variant="link"
-                onClick={() => push("/works")}
+                onClick={() => {
+                  handleOnClose();
+                  push("/");
+                }}
                 size="lg"
               >
                 Produto
               </Button>
               <Button
                 variant="link"
-                onClick={() => push("/contact")}
+                onClick={() => {
+                  handleOnClose();
+                  push("/");
+                }}
                 size="lg"
               >
                 Contato
