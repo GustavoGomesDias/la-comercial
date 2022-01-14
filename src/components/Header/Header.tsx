@@ -1,19 +1,26 @@
-import React from 'react';
+import React, { useState, MouseEvent } from 'react';
 import { Button, chakra, Flex, HStack, IconButton } from '@chakra-ui/react';
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FaFacebookSquare, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import { Icons } from './Icons';
+import { SideMenu } from './SideMenu';
 
 
 export const Header = (): JSX.Element => {
-  const { push }  = useRouter();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { push } = useRouter();
+
+  const handleIsOpen = (e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
+    e.preventDefault();
+    setIsOpen(true);
+  }
 
   return (
     <chakra.header
       bgGradient="linear(to-b, #f4f4f4, #fff, #e4e4e4)"
       px={{ base: 2, sm: 2 }}
-      py={4}
+      py={2}
       w="full"
       position="sticky"
     >
@@ -26,7 +33,7 @@ export const Header = (): JSX.Element => {
         spacing={3}
         paddingRight="300px"
         mr={1}
-        display={{xl: "inline-flex" }}
+        display={{ base: "none", lg: "inline-flex" }}
       >
         <Button
           variant="link"
@@ -52,17 +59,21 @@ export const Header = (): JSX.Element => {
         >
           Contato
         </Button>
-        {/* <IconButton
-          display={{ base: "flex", xl: "none" }}
+      </HStack>
+      <Flex justifyContent="flex-end" mt="2">
+        <IconButton
+          display={{ base: "flex", lg: "none" }}
           aria-label="Abrir Manu"
           fontSize="20px"
           color={"blackAlpha.800"}
-          _hover={{ bg: "yellow.800" }}
+          _hover={{ bg: "#CCC" }}
           _focus={{ boxShadow: "outline" }}
           variant="ghost"
           icon={<AiOutlineMenu />}
-        /> */}
-      </HStack>
+          onClick={(e) => handleIsOpen(e)}
+        />
+        <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+      </Flex>
     </chakra.header>
   );
 }
