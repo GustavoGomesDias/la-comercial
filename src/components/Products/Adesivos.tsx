@@ -7,7 +7,7 @@ export const Adesivos = (): JSX.Element => {
       justifyContent="center"
     >
       <UnorderedList
-        fontSize={["1em", "0.8rem", "1.5rem"]}
+        fontSize={["1em", "1rem", "1.2rem", "1.5rem"]}
         color="#fff"
         w="80%"
         padding={7}

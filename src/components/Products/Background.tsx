@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, useMediaQuery } from '@chakra-ui/react';
 
 export interface HandleHoverBg {
   isMouseEnter: boolean
@@ -9,7 +9,7 @@ export interface HandleHoverBg {
   handleMouseOut: () => void
 }
 
-export const Background = ({index, cardIndex, handleMouseOut, handleMouseEnter }: HandleHoverBg): JSX.Element => {
+export const Background = ({ index, cardIndex, handleMouseOut, handleMouseEnter }: HandleHoverBg): JSX.Element => {
   return (
     <Box
       bgBlendMode="multiply"
@@ -18,7 +18,7 @@ export const Background = ({index, cardIndex, handleMouseOut, handleMouseEnter }
       bgSize="cover"
       bgPos=""
       h="600px"
-      w="33.27%"
+      w="33.2%"
       filter={cardIndex === index ? "blur(0px) !important" : "blur(19px)"}
       position="absolute"
       zIndex={2}

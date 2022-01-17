@@ -1,6 +1,5 @@
-import React, { MouseEventHandler } from 'react';
-import { chakra, Flex } from '@chakra-ui/react';
-import { Adesivos } from './Adesivos';
+import React from 'react';
+import { chakra, Flex, useMediaQuery } from '@chakra-ui/react';
 
 export interface HandleHoverCard {
   index: number
@@ -12,6 +11,16 @@ export interface HandleHoverCard {
 }
 
 export const Card = ({ handleMouseEnter, handleMouseOut, index, header, cardIndex, contentList }: HandleHoverCard): JSX.Element => {
+  const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
+  const [isLargeScreen] = useMediaQuery('(max-width: 1220px)');
+
+  const handleControlH3fontSize = isSmallScreen ? "24px" : (isLargeScreen ? "36px": "48px");
+  const handleTitleColorInSmallScreen = isSmallScreen ?
+    "#fff"
+    :
+    (cardIndex === index ? "#fff": "#a41c1c");
+
+  const handleRenderContentListInSmallScreen = isSmallScreen ? contentList : ((cardIndex === index) && contentList);
   return (
     <Flex
       position="relative"
@@ -26,11 +35,11 @@ export const Card = ({ handleMouseEnter, handleMouseOut, index, header, cardInde
       <chakra.h3
         textAlign="center"
         w="full"
-        fontSize="64px"
+        fontSize={handleControlH3fontSize}
         p="0.3em"
         fontWeight="medium"
         borderBottom="1px solid #e0d5d6"
-        color={cardIndex === index ? "#fff": "#a41c1c"}
+        color={handleTitleColorInSmallScreen}
       >
         {header}
       </chakra.h3>
@@ -39,7 +48,7 @@ export const Card = ({ handleMouseEnter, handleMouseOut, index, header, cardInde
         alignItems="center"
       >
       </Flex>
-      {(cardIndex === index) && contentList}
+      {handleRenderContentListInSmallScreen}
     </Flex>
   );
 }
