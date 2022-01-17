@@ -20,6 +20,7 @@ export const Home = (): JSX.Element => {
       position="absolute"
       mt={handleCotrolMt}
       left="5%"
+      overflowX="hidden"
     >
       <chakra.h1
         fontSize={handleControlH1fontSize}

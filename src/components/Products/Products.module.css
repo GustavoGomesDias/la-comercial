@@ -1,0 +1,40 @@
+.background-image {
+  background-repeat:no-repeat;
+  position: fixed;
+  z-index: 1;
+
+  display: block;
+  background-image: url('/images/body/about.jpg');
+  height: 200px;
+  width: 200px;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+
+}
+.conteudo {
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  position: fixed;
+  margin-left: 120px;
+  margin-right: 50px;
+  color:#fff;
+}
+
+.box1 {
+  position: absolute;
+  left: 0;
+}
+
+.box2 {
+  position: absolute;
+  left: 50;
+}
+
+.box3 {
+  position: absolute; 
+  left: 100;
+}

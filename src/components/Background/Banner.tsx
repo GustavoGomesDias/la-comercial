@@ -30,6 +30,7 @@ export const Banner = ({ urlImg, content, svgText, height }: BannerProps): JSX.E
       alignItems="center"
       justifyContent="flex-start"
       flexDir="column"
+      overflowX="hidden"
     >
       {svgText !== undefined && <svg height="600px" width="100%">
         <text
