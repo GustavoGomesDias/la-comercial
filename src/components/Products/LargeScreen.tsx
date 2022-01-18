@@ -6,7 +6,7 @@ import { Card } from './Card';
 
 export const LargeScreen = (): JSX.Element => {
   const [isMouseEnter, setIsMouseEnter] = useState<boolean>(false);
-  const [cardIndex, setCardIndex] = useState<number>(0);
+  const [cardIndex, setCardIndex] = useState<number>(1);
 
   const handleMouseEnter = (index: number): void => {
     setCardIndex(index);

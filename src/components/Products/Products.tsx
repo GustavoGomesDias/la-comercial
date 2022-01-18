@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
-import { Flex, Stack, useMediaQuery } from '@chakra-ui/react';
-import { Background } from './Background';
-import { Card } from './Card';
-import { Adesivos } from './Adesivos';
+import React from 'react';
+import { useMediaQuery } from '@chakra-ui/react';
 import { LargeScreen } from './LargeScreen';
 import { SmallScreen } from './SmallSreen';
 
@@ -11,7 +8,15 @@ export const Products = (): JSX.Element => {
 
   return (
     <>
-      {isSmallScreen ? <SmallScreen /> : <LargeScreen />}
+      {isSmallScreen ? <SmallScreen /> : (
+        <div style={{
+          display: 'inline-block',
+          position: 'relative',
+          width: "100%"
+        }}>
+          <LargeScreen />
+        </div>
+      )}
     </>
   );
 };

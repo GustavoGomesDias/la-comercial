@@ -1,8 +1,42 @@
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/NexaRegular.otf') format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa-Bold.otf') format("opentype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa-Bold-Italic.otf') format("opentype");
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa-Light.otf') format("opentype");
+  font-style: normal;
+  font-weight: lighter;
+}
+@font-face {
+  font-family: 'Nexa';
+  src: url('/fonts/Nexa-Light-Italic.otf') format("opentype");
+  font-style: italic;
+  font-weight: lighter;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Nexa, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   overflow-x: "hidden";
