@@ -1,4 +1,4 @@
-import React, { Dispatch } from 'react';
+import React, { Dispatch, RefObject } from 'react';
 import {
   Button,
   Drawer,
@@ -12,11 +12,16 @@ import {
 import { useRouter } from 'next/router';
 
 export interface SideMenuProps {
+  homeRef: RefObject<HTMLDivElement>
+  aboutRef: RefObject<HTMLDivElement>
+  productsRef: RefObject<HTMLDivElement>
+  contactRef: RefObject<HTMLDivElement>
+  handleScroll: (ref: RefObject<HTMLDivElement>) => void
   isOpen: boolean
   setIsOpen: Dispatch<React.SetStateAction<boolean>>
 }
 
-export function SideMenu({ isOpen, setIsOpen }: SideMenuProps) {
+export function SideMenu({ isOpen, setIsOpen, homeRef, aboutRef, productsRef, contactRef, handleScroll }: SideMenuProps) {
   const { onOpen, onClose } = useDisclosure();
 
   const { push } = useRouter();
@@ -48,7 +53,7 @@ export function SideMenu({ isOpen, setIsOpen }: SideMenuProps) {
                 variant="link"
                 onClick={() => {
                   handleOnClose();
-                  push("/");
+                  handleScroll(homeRef)
                 }}
                 size="lg"
               >
@@ -58,7 +63,7 @@ export function SideMenu({ isOpen, setIsOpen }: SideMenuProps) {
                 variant="link"
                 onClick={() => {
                   handleOnClose();
-                  push("/");
+                  handleScroll(aboutRef)
                 }}
                 size="lg"
               >
@@ -68,7 +73,7 @@ export function SideMenu({ isOpen, setIsOpen }: SideMenuProps) {
                 variant="link"
                 onClick={() => {
                   handleOnClose();
-                  push("/");
+                  handleScroll(productsRef)
                 }}
                 size="lg"
               >
@@ -78,7 +83,7 @@ export function SideMenu({ isOpen, setIsOpen }: SideMenuProps) {
                 variant="link"
                 onClick={() => {
                   handleOnClose();
-                  push("/");
+                  handleScroll(contactRef)
                 }}
                 size="lg"
               >

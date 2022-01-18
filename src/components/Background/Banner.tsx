@@ -26,7 +26,6 @@ export const Banner = ({ urlImg, content, svgText, height }: BannerProps): JSX.E
       bgSize="cover"
       w="full"
       h={height}
-      mt={3}
       alignItems="center"
       justifyContent="flex-start"
       flexDir="column"

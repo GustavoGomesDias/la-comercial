@@ -1,4 +1,4 @@
-import React, { useState, MouseEvent } from 'react';
+import React, { useState, MouseEvent, RefObject } from 'react';
 import { Button, chakra, Flex, HStack, IconButton } from '@chakra-ui/react';
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FaFacebookSquare, FaInstagram, FaWhatsapp } from 'react-icons/fa';
@@ -6,8 +6,15 @@ import { useRouter } from 'next/router';
 import { Icons } from './Icons';
 import { SideMenu } from './SideMenu';
 
+export interface HeaderProps {
+  homeRef: RefObject<HTMLDivElement>
+  aboutRef: RefObject<HTMLDivElement>
+  productsRef: RefObject<HTMLDivElement>
+  contactRef: RefObject<HTMLDivElement>
+  handleScroll: (ref: RefObject<HTMLDivElement>) => void
+}
 
-export const Header = (): JSX.Element => {
+export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScroll }: HeaderProps): JSX.Element => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { push } = useRouter();
 
@@ -22,7 +29,9 @@ export const Header = (): JSX.Element => {
       px={{ base: 2, sm: 2 }}
       py={2}
       w="full"
+      top={0}
       position="sticky"
+      zIndex={10}
     >
       <HStack justifyContent="flex-end">
         <Icons to="/" icon={<FaInstagram color="#e7001c" />} />
@@ -37,25 +46,25 @@ export const Header = (): JSX.Element => {
       >
         <Button
           variant="link"
-          onClick={() => push("/")}
+          onClick={() => handleScroll(homeRef)}
         >
           Home
         </Button>
         <Button
           variant="link"
-          onClick={() => push("/about")}
+          onClick={() => handleScroll(aboutRef)}
         >
           Sobre
         </Button>
         <Button
           variant="link"
-          onClick={() => push("/works")}
+          onClick={() => handleScroll(productsRef)}
         >
           Produto
         </Button>
         <Button
           variant="link"
-          onClick={() => push("/contact")}
+          onClick={() => handleScroll(contactRef)}
         >
           Contato
         </Button>
@@ -72,7 +81,15 @@ export const Header = (): JSX.Element => {
           icon={<AiOutlineMenu />}
           onClick={(e) => handleIsOpen(e)}
         />
-        <SideMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+        <SideMenu
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          handleScroll={handleScroll}
+          homeRef={homeRef}
+          aboutRef={aboutRef}
+          productsRef={productsRef}
+          contactRef={contactRef}
+        />
       </Flex>
     </chakra.header>
   );

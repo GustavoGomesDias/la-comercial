@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { RefObject, useState } from 'react';
 import { Box, Button, chakra, Flex, Grid, HStack, Text, useMediaQuery } from '@chakra-ui/react';
 import { InputControl } from '../Form/InputControl';
 import { Icons } from '..';
