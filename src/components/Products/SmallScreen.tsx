@@ -6,7 +6,6 @@ import { MobileBg } from './MobileBg';
 export const SmallScreen = (): JSX.Element => {
   return (
     <Stack
-      mt="3rem"
       spacing="2px"
       w="full"
       direction="column"

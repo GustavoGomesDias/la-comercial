@@ -5,11 +5,15 @@ import {
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
+  DrawerFooter,
   DrawerOverlay,
+  HStack,
   useDisclosure,
   VStack
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
+import { Icons } from './Icons';
+import { FaFacebookSquare, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 export interface SideMenuProps {
   homeRef: RefObject<HTMLDivElement>
@@ -41,7 +45,7 @@ export function SideMenu({ isOpen, setIsOpen, homeRef, aboutRef, productsRef, co
       >
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton />
+          <DrawerCloseButton ringOffsetColor="e7001c" />
 
           <DrawerBody display="flex" bgGradient="linear(to-b, #f4f4f4, #fff, #e4e4e4)">
             <VStack
@@ -91,6 +95,13 @@ export function SideMenu({ isOpen, setIsOpen, homeRef, aboutRef, productsRef, co
               </Button>
             </VStack>
           </DrawerBody>
+          <DrawerFooter justifyContent="center">
+            <HStack justifyContent="center">
+              <Icons to="/" icon={<FaInstagram size="40px" color="#e7001c" />} />
+              <Icons to="/" icon={<FaFacebookSquare size="40px" color="#e7001c" />} />
+              <Icons to="/" icon={<FaWhatsapp size="40px" color="#e7001c" />} />
+            </HStack>
+          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </>

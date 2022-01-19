@@ -4,6 +4,7 @@ import { useMediaQuery } from '@chakra-ui/react';
 import { Header, Banner, Home as HomeContent, Footer, Products } from '../index';
 import { About } from '../About/About';
 import { useState } from 'react';
+import { Difference } from '../Difference/Diferremce';
 
 const SPA = (): JSX.Element => {
   const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
@@ -48,6 +49,7 @@ const SPA = (): JSX.Element => {
         marginBottom: "80px"
       }} />
       <Banner content={<About />} height={isSmallScreen ? "300px" : "600px"} urlImg="/images/body/about.jpg" />
+      <Difference />
       <div ref={productsRef} style={{
         marginBottom: "20px"
       }} />
