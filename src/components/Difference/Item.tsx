@@ -15,6 +15,7 @@ export const Item = ({ imgPath, fontSize, boxSize, content, alt }: ItemProps): J
     <Flex w="full">
       <Flex
         alignItems="center"
+        mr="5px"
       >
         <Image
           src={imgPath}
@@ -29,9 +30,6 @@ export const Item = ({ imgPath, fontSize, boxSize, content, alt }: ItemProps): J
         alignItems: "center",
         fontSize: fontSize,
       }}>
-        <Box>
-          <Circle height="10px" width="10px" bg="#686464" />
-        </Box>
         {content}
       </span>
     </Flex>

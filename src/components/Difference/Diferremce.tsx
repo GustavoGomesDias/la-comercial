@@ -6,7 +6,7 @@ import { Item } from './Item';
 export const Difference = (): JSX.Element => {
   const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
   const [isLargeScreen] = useMediaQuery('(max-width: 1200px)');
-  const handleControlTxtSize = isSmallScreen ? "14px" : (isLargeScreen ? "26px": "30px");
+  const handleControlTxtSize = isSmallScreen ? "12px" : (isLargeScreen ? "26px": "30px");
   const handleControlPadding = isSmallScreen ? "0.5em" : (isLargeScreen ? "1em": "7em");
   const handleControlBoxSize = isSmallScreen ? "2em" : (isLargeScreen ? "3em": "5em");
 
@@ -15,7 +15,7 @@ export const Difference = (): JSX.Element => {
       templateColumns="repeat(2, 1fr)"
       alignItems="center"
       padding={handleControlPadding}
-      gap={6}
+      gap={4}
     >
       <Item
           alt='Stock productis representation image'
