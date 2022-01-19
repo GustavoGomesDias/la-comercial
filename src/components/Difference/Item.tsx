@@ -13,11 +13,15 @@ export interface ItemProps {
 export const Item = ({ imgPath, fontSize, boxSize, content, alt }: ItemProps): JSX.Element => {
   return (
     <Flex w="full">
-      <Image
-        src={imgPath}
-        alt={alt}
-        boxSize={boxSize}
-      />
+      <Flex
+        alignItems="center"
+      >
+        <Image
+          src={imgPath}
+          alt={alt}
+          boxSize={boxSize}
+        />
+      </Flex>
 
       <span style={{
         color: "#686464",
