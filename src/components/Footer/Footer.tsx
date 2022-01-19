@@ -94,10 +94,11 @@ export const Footer = (): JSX.Element => {
         justifyContent="center"
         h="50px"
         bgColor="#96151b"
+        padding={isSmallScreen ? "0.5em" : "0"}
       >
-        <Text textAlign="center" my="auto" fontSize="0.7em">comerciallea.com.br</Text> <Circle />
-        <Text textAlign="center" my="auto" fontSize="0.7em">Todos os direitos reservados</Text> <Circle />
-        <Text textAlign="center" my="auto" fontSize="0.7em">Comercial L&A 2022</Text>
+        <Text textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>comerciallea.com.br</Text> <Circle />
+        <Text textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>Todos os direitos reservados</Text> <Circle />
+        <Text textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>Comercial L&A 2022</Text>
       </Flex>
     </Flex>
   );
