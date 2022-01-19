@@ -3,6 +3,7 @@ import { RefObject, useRef } from 'react';
 import { useMediaQuery } from '@chakra-ui/react';
 import { Header, Banner, Home as HomeContent, Footer, Products } from '../index';
 import { About } from '../About/About';
+import SEO from '../SEO';
 
 const SPA = (): JSX.Element => {
   const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
