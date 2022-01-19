@@ -13,7 +13,7 @@ export const Banner = ({ urlImg, content, svgText, height }: BannerProps): JSX.E
   const [isLargeScreen] = useMediaQuery('(max-width: 1200px)');
 
   const handleControlSVGposition = isSmallScreen ? "150" : (isLargeScreen ? "250": "300");
-  const handleControlSVGTxtSize = isSmallScreen ? "5.2em" : (isLargeScreen ? "9em": "15em");
+  const handleControlSVGTxtSize = isSmallScreen ? "5em" : (isLargeScreen ? "9em": "15em");
 
   return (
     <Flex
