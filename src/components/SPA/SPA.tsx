@@ -3,11 +3,29 @@ import { RefObject, useRef } from 'react';
 import { useMediaQuery } from '@chakra-ui/react';
 import { Header, Banner, Home as HomeContent, Footer, Products } from '../index';
 import { About } from '../About/About';
-import SEO from '../SEO';
+import { useState } from 'react';
 
 const SPA = (): JSX.Element => {
   const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
-  const handleScroll = (ref: RefObject<HTMLDivElement>) => ref.current!.scrollIntoView();
+  const [previewOffsetTop, setPreviewOffsetTop] = useState<number>(0);
+  const handleScroll = (ref: RefObject<HTMLDivElement>) => {
+    
+    if (isSmallScreen) {
+      setPreviewOffsetTop(ref.current.offsetTop);
+      console.log(ref.current.offsetTop);
+      console.log(previewOffsetTop);
+      console.log(window.innerHeight);
+
+      let offsetTop: number;;
+       if (ref.current.offsetTop < previewOffsetTop) {
+        offsetTop = -(previewOffsetTop - ref.current.offsetTop);
+       } else {
+         offsetTop = ref.current.offsetTop - previewOffsetTop;
+       }
+      window.scrollBy(0, offsetTop);
+    }
+    else ref.current.scrollIntoView();
+  }
   const homeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const productsRef = useRef<HTMLDivElement>(null);
@@ -33,7 +51,7 @@ const SPA = (): JSX.Element => {
       <div ref={productsRef} style={{
         marginBottom: "20px"
       }} />
-      <Products />
+      <Products /> 
       <div ref={contactRef} />
       <Footer />
     </>

@@ -1,5 +1,5 @@
 import React, { useState, MouseEvent, RefObject } from 'react';
-import { Button, chakra, Flex, HStack, IconButton } from '@chakra-ui/react';
+import { Button, chakra, Flex, HStack, IconButton, useMediaQuery } from '@chakra-ui/react';
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FaFacebookSquare, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { useRouter } from 'next/router';
@@ -17,6 +17,8 @@ export interface HeaderProps {
 export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScroll }: HeaderProps): JSX.Element => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { push } = useRouter();
+  const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
+
 
   const handleIsOpen = (e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
     e.preventDefault();
@@ -32,6 +34,10 @@ export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScrol
       top={0}
       position="sticky"
       zIndex={10}
+      opacity={isSmallScreen ? "0.4" : "1"}
+      _hover={{
+        opacity: '1'
+      }}
     >
       <HStack justifyContent="flex-end">
         <Icons to="/" icon={<FaInstagram color="#e7001c" />} />
