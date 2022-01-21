@@ -27,14 +27,14 @@ export const Home = (): JSX.Element => {
         fontWeight="bold"
         // h="100%"
         w="100%"
-        color="#fff"
+        // color="#e4e4e4"
       >
         ADESIVOS
       </chakra.h1>
       <chakra.h1
         w="100%"
         fontSize={handleControlH2fontSize}
-        color="#fff"
+        // color="#e4e4e4"
       >
         DISTRIBUIÇÃO PARA TODO O BRASIL
       </chakra.h1>

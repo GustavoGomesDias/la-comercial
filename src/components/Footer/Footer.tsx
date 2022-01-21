@@ -1,5 +1,5 @@
 import React, { RefObject, useState } from 'react';
-import { Box, Button, chakra, Flex, Grid, HStack, Text, useMediaQuery } from '@chakra-ui/react';
+import { Box, Button, chakra, Flex, Grid, HStack, Image, Text, useMediaQuery } from '@chakra-ui/react';
 import { InputControl } from '../Form/InputControl';
 import { Icons } from '..';
 import { FaFacebookSquare, FaInstagram, FaWhatsapp } from 'react-icons/fa';
@@ -12,7 +12,7 @@ export const Footer = (): JSX.Element => {
   return (
     <Flex
       borderTop="5px solid #b3b3b3"
-      mt={isSmallScreen ? "75px" : "200px"}
+      mt={isSmallScreen ? "100px" : "200px"}
       bgGradient="linear(to-br, #c8242c, #d31b1f)"
       flexDir="column"
     >
@@ -23,18 +23,12 @@ export const Footer = (): JSX.Element => {
         gap={8}
       >
         <Flex>
-          <chakra.h1
-            fontSize="64px"
-            borderRight=""
-            w="full"
-            textAlign="center"
-            my="auto"
-          >
-            Logo
-          </chakra.h1>
+          <Flex w={isSmallScreen ? "100%" : "90%"} alignItems="center" justifyContent="center">
+            <Image src="/images/body/logo.png" w={isSmallScreen ? "50%" : "75%"} h={isSmallScreen ? "50%" : "75%"} />
+          </Flex>
           <Box width="3px" height="75%" my="auto" bgGradient="linear(to-t, transparent, #ccc, #fff, #ccc, transparent)" />
         </Flex>
-        <Box padding={isSmallScreen ? "1em": "none"}>
+        <Box padding={isSmallScreen ? "1em" : "none"}>
           <form>
             <chakra.h2 color="#fff" fontSize="24px">Fale Conosco</chakra.h2>
             <Grid templateColumns='repeat(2, 1fr)' gap={1}>
@@ -67,6 +61,7 @@ export const Footer = (): JSX.Element => {
                 fontSize: "0.8em",
                 fontWeight: "lighter"
               }}
+              color="#fff"
             >
               comercial@comerciallea.com.br<br /><br />
               <span
@@ -83,7 +78,7 @@ export const Footer = (): JSX.Element => {
 
           </Flex>
         </Box>
-        <HStack justifyContent="center" alignItems={isSmallScreen ? "flex-start": "center"}>
+        <HStack justifyContent="center" alignItems={isSmallScreen ? "flex-start" : "center"}>
           <Icons to="/" icon={<FaInstagram color="#fff" size="40px" />} />
           <Icons to="/" icon={<FaFacebookSquare color="#fff" size="40px" />} />
           <Icons to="/" icon={<FaWhatsapp color="#fff" size="40px" />} />
@@ -96,9 +91,9 @@ export const Footer = (): JSX.Element => {
         bgColor="#96151b"
         padding={isSmallScreen ? "0.5em" : "0"}
       >
-        <Text textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>comerciallea.com.br</Text> <Circle />
-        <Text textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>Todos os direitos reservados</Text> <Circle />
-        <Text textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>Comercial L&A 2022</Text>
+        <Text color="#fff" textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>comerciallea.com.br</Text> <Circle />
+        <Text color="#fff" textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>Todos os direitos reservados</Text> <Circle />
+        <Text color="#fff" textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>Comercial L&A 2022</Text>
       </Flex>
     </Flex>
   );

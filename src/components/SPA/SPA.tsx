@@ -10,7 +10,7 @@ const SPA = (): JSX.Element => {
   const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
   const [previewOffsetTop, setPreviewOffsetTop] = useState<number>(0);
   const handleScroll = (ref: RefObject<HTMLDivElement>) => {
-    
+
     if (isSmallScreen) {
       setPreviewOffsetTop(ref.current.offsetTop);
       console.log(ref.current.offsetTop);
@@ -18,11 +18,11 @@ const SPA = (): JSX.Element => {
       console.log(window.innerHeight);
 
       let offsetTop: number;;
-       if (ref.current.offsetTop < previewOffsetTop) {
+      if (ref.current.offsetTop < previewOffsetTop) {
         offsetTop = -(previewOffsetTop - ref.current.offsetTop);
-       } else {
-         offsetTop = ref.current.offsetTop - previewOffsetTop;
-       }
+      } else {
+        offsetTop = ref.current.offsetTop - previewOffsetTop;
+      }
       window.scrollBy(0, offsetTop);
     }
     else ref.current.scrollIntoView();
@@ -44,7 +44,7 @@ const SPA = (): JSX.Element => {
       <div ref={homeRef} style={{
         marginBottom: "40px"
       }} />
-      <Banner content={<HomeContent />} height={isSmallScreen ? "200px" : "400px"} svgText='ADESIVOS' urlImg='/images/home.jpg' />
+      <Banner content={<HomeContent />} height={isSmallScreen ? "200px" : "400px"} urlImg='/images/body/home.jpg' />
       <div ref={aboutRef} style={{
         marginBottom: "80px"
       }} />
@@ -53,7 +53,7 @@ const SPA = (): JSX.Element => {
       <div ref={productsRef} style={{
         marginBottom: "20px"
       }} />
-      <Products /> 
+      <Products />
       <div ref={contactRef} />
       <Footer />
     </>

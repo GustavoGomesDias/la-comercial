@@ -13,7 +13,7 @@ export const About = (): JSX.Element => {
     >
       <chakra.h1
         fontSize={["1.5em", "1.6em", "4em"]}
-        color="#fff"
+        // color="#fff"
         lineHeight="1"
       >
         MAIS

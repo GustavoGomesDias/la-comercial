@@ -5,15 +5,16 @@ export interface HandleHoverBg {
   isMouseEnter: boolean
   index: number
   cardIndex: number
+  imgPath: string
   handleMouseEnter: (index: number) => void
   handleMouseOut: () => void
 }
 
-export const Background = ({ index, cardIndex, handleMouseOut, handleMouseEnter }: HandleHoverBg): JSX.Element => {
+export const Background = ({ index, cardIndex, imgPath, handleMouseOut, handleMouseEnter }: HandleHoverBg): JSX.Element => {
   return (
     <Box
       bgBlendMode="multiply"
-      bgImage={cardIndex === index ? "linear-gradient(to right, #a41c1c, #a41c1c, #a41c1c), url('/images/body/about.jpg') !important" : "url('/images/body/about.jpg')"}
+      bgImage={cardIndex === index ? `linear-gradient(to right, #a41c1c, #a41c1c, #a41c1c), url('${imgPath}') !important` : `url('${imgPath}')`}
       bgRepeat="no-repeat"
       bgSize="cover"
       bgPos=""

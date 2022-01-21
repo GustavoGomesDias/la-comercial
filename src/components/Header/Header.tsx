@@ -1,5 +1,5 @@
 import React, { useState, MouseEvent, RefObject } from 'react';
-import { Button, chakra, Flex, HStack, IconButton, useMediaQuery } from '@chakra-ui/react';
+import { Button, chakra, Flex, HStack, IconButton, Image, useMediaQuery } from '@chakra-ui/react';
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FaFacebookSquare, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { useRouter } from 'next/router';
@@ -29,7 +29,7 @@ export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScrol
     <chakra.header
       bgGradient="linear(to-b, #f4f4f4, #fff, #e4e4e4)"
       px={{ base: 2, sm: 2 }}
-      py={2}
+      pt={3}
       w="full"
       top={0}
       position="sticky"
@@ -44,11 +44,13 @@ export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScrol
         <Icons to="/" icon={<FaFacebookSquare color="#e7001c" />} />
         <Icons to="/" icon={<FaWhatsapp color="#e7001c" />} />
       </HStack>
+      <Image src="/images/body/logo.png" h="60px" w="65px" position="absolute" zIndex={11} />
       <HStack
         spacing={3}
         paddingRight="300px"
         mr={1}
         display={{ base: "none", lg: "inline-flex" }}
+        ml={20}
       >
         <Button
           variant="link"

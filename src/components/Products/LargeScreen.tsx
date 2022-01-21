@@ -34,6 +34,7 @@ export const LargeScreen = (): JSX.Element => {
           cardIndex={cardIndex}
           handleMouseOut={handleMouseOut}
           handleMouseEnter={handleMouseEnter}
+          imgPath="/images/body/card1.jpg"
         />
         <Card
           handleMouseOut={handleMouseOut}
@@ -53,6 +54,7 @@ export const LargeScreen = (): JSX.Element => {
           cardIndex={cardIndex}
           handleMouseOut={handleMouseOut}
           handleMouseEnter={handleMouseEnter}
+          imgPath="/images/body/card2.jpg"
         />
         <Card
           handleMouseOut={handleMouseOut}
@@ -72,6 +74,7 @@ export const LargeScreen = (): JSX.Element => {
           cardIndex={cardIndex}
           handleMouseOut={handleMouseOut}
           handleMouseEnter={handleMouseEnter}
+          imgPath="/images/body/card2.jpg"
         />
         <Card
           handleMouseOut={handleMouseOut}
