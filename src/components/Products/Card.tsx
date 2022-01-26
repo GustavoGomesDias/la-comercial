@@ -1,6 +1,8 @@
 import React from 'react';
-import { chakra, Flex, useMediaQuery, Image, Button } from '@chakra-ui/react';
+import { chakra, Flex, useMediaQuery, Image, Button, Link } from '@chakra-ui/react';
 import { FaWhatsapp } from 'react-icons/fa';
+
+// TODO: user 'https://wa.me/<number>' no botão do whats
 
 export interface HandleHoverCard {
   index: number
@@ -32,7 +34,7 @@ export const Card = ({ handleMouseEnter, handleMouseOut, index, header, cardInde
       bgRepeat="no-repeat"
       bgSize="cover"
       bgPos=""
-      height={isSmallScreen ? "350px": "600px"}
+      height={isSmallScreen ? "350px" : "600px"}
     >
       <chakra.h3
         textAlign="center"
@@ -53,15 +55,23 @@ export const Card = ({ handleMouseEnter, handleMouseOut, index, header, cardInde
       <Flex alignItems="center" justifyContent="center" flexDir="column" h="100%">
         <Image
           src="/images/body/betaflex.png"
-          w={isSmallScreen ? "45%": "50%"}
-          h={isSmallScreen ? "45%": "50%"}
+          w={isSmallScreen ? "45%" : "50%"}
+          h={isSmallScreen ? "45%" : "50%"}
           alt='L&A Comercial Logo'
         />
-        <Button bg='#25D366' textColor="#fff" size={isSmallScreen ? "sm": "lg"} mt={5} _hover={{
-          bg: '#075E54'
-        }}>
-          <FaWhatsapp color="#fff" style={{ marginRight: "5px" }}/> Conheça
-        </Button>
+        <Link href='#' isExternal>
+          <Button
+            bg='#25D366'
+            textColor="#fff"
+            size={isSmallScreen ? "sm" : "lg"}
+            mt={5}
+            _hover={{
+              bg: '#075E54'
+            }}
+          >
+            <FaWhatsapp color="#fff" style={{ marginRight: "5px" }} /> Conheça
+          </Button>
+        </Link>
       </Flex>
     </Flex>
   );
