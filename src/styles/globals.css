@@ -52,3 +52,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #646464 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #646464 !important;
+}

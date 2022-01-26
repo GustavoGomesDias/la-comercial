@@ -14,7 +14,7 @@ export const MobileBg = ({ Content }: MobileBgProps): JSX.Element => {
       bgSize="cover"
       bgPos=""
       w="full"
-      height="300px"
+      height="600px"
     >
       {Content}
     </Flex>

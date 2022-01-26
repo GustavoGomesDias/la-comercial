@@ -1,30 +1,21 @@
 import React from 'react';
-import { Flex, ListItem, UnorderedList } from '@chakra-ui/react';
+import { Flex, Image } from '@chakra-ui/react';
 
 export const Adesivos = (): JSX.Element => {
   return (
     <Flex
       justifyContent="center"
     >
-      <UnorderedList
-        fontSize={["1em", "1rem", "1.2rem", "1.5rem"]}
-        color="#fff"
-        w="80%"
-        padding={7}
-      >
-        <ListItem>
-          Produtos em estoque
-        </ListItem>
-        <ListItem>
-          Distribuição para todo o Brasil
-        </ListItem>
-        <ListItem>
-          Logística facilitada e entrega mais rápida
-        </ListItem>
-        <ListItem>
-          Certificados de Qualidade
-        </ListItem>
-      </UnorderedList>
+      <Image
+        src="/images/body/betaflex.png" 
+        h="120px"
+        w="120px"
+        top="0"
+        ml={10}
+        position="absolute"
+        zIndex={11}
+        alt='L&A Comercial Logo'
+      />
     </Flex>
   );
 }

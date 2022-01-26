@@ -8,41 +8,29 @@ export const SmallScreen = (): JSX.Element => {
     <Stack
       spacing="2px"
       w="full"
-      direction="column"
+      direction="row"
       overflowX="hidden"
     >
-      <MobileBg
-        Content={<Card
-            header="ADESIVOS"
-            cardIndex={0}
-            contentList={<Adesivos />}
-            handleMouseEnter={() => {}}
-            handleMouseOut={() => {}}
-            index={0}
-          />
-        }
+      <Card
+        header="ADESIVOS"
+        cardIndex={0}
+        handleMouseEnter={() => { }}
+        handleMouseOut={() => { }}
+        index={0}
       />
-      <MobileBg
-        Content={<Card
-            header="SELANTES"
-            cardIndex={0}
-            contentList={<Adesivos />}
-            handleMouseEnter={() => {}}
-            handleMouseOut={() => {}}
-            index={0}
-          />
-        }
+      <Card
+        header="SELANTES"
+        cardIndex={0}
+        handleMouseEnter={() => { }}
+        handleMouseOut={() => { }}
+        index={0}
       />
-      <MobileBg
-        Content={<Card
-            header="FERRAMENTAS"
-            cardIndex={0}
-            contentList={<Adesivos />}
-            handleMouseEnter={() => {}}
-            handleMouseOut={() => {}}
-            index={0}
-          />
-        }
+      <Card
+        header="FERRAMENTAS"
+        cardIndex={0}
+        handleMouseEnter={() => { }}
+        handleMouseOut={() => { }}
+        index={0}
       />
     </Stack>
   );
