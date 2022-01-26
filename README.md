@@ -48,8 +48,8 @@ WorkFlow que eu segui no projeto
 
 ---
 
-1. Crie abra uma [Issue](https://github.com/Artcom-com/artcomweb/issues) no repositório
-2. Coloque ela em algum [Project](https://github.com/Artcom-com/artcomweb/projects)
+1. Crie abra uma [Issue](https://github.com/Artcom-com/la-comercial/issues) no repositório
+2. Coloque ela em algum [Project](https://github.com/orgs/Artcom-com/projects/1)
 3. Crie uma `branch` que contém um nome descritivo com o que você está fazendo
 ```bash
 git branch <nome_descritivo>
