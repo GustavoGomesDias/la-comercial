@@ -39,11 +39,11 @@ export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScrol
         opacity: '1'
       }}
     >
-      <HStack justifyContent="flex-end">
+      {!isSmallScreen && <HStack justifyContent="flex-end">
         <Icons to="/" icon={<FaInstagram color="#bc140c" />} />
         <Icons to="/" icon={<FaFacebookSquare color="#bc140c" />} />
         <Icons to="/" icon={<FaWhatsapp color="#bc140c" />} />
-      </HStack>
+      </HStack>}
       {!isSmallScreen && <Image
         src="/images/svgs/logo.svg" 
         h="120px"
