@@ -63,7 +63,7 @@ export const Card = ({ handleMouseEnter, handleMouseOut, index, header, cardInde
           <Button
             bg='#25D366'
             textColor="#fff"
-            size={isSmallScreen ? "sm" : "lg"}
+            size={isSmallScreen ? "md" : "lg"}
             mt={5}
             _hover={{
               bg: '#075E54'
