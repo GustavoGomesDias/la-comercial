@@ -1,6 +1,5 @@
 import React from 'react';
 import { useMediaQuery } from '@chakra-ui/react';
-import { LargeScreen } from './LargeScreen';
 import { SmallScreen } from './SmallScreen';
 import Carousel from './Carousel/Carousel';
 import { Card } from './Card';

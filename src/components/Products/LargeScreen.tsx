@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Flex, Stack } from '@chakra-ui/react';
-import { Adesivos } from './Adesivos';
 import { Background } from './Background';
 import { Card } from './Card';
 
@@ -42,7 +41,6 @@ export const LargeScreen = (): JSX.Element => {
           index={1}
           cardIndex={cardIndex}
           header='ADESIVOS'
-          contentList={<Adesivos />}
         />
       </Flex>
       <Flex
@@ -62,7 +60,6 @@ export const LargeScreen = (): JSX.Element => {
           index={2}
           cardIndex={cardIndex}
           header='SELANTES'
-          contentList={<Adesivos />}
         />
       </Flex>
       <Flex
@@ -82,7 +79,6 @@ export const LargeScreen = (): JSX.Element => {
           index={3}
           cardIndex={cardIndex}
           header='FERRAMENTA'
-          contentList={<Adesivos />}
         />
       </Flex>
     </Stack>
