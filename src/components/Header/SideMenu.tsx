@@ -9,7 +9,8 @@ import {
   DrawerOverlay,
   HStack,
   useDisclosure,
-  VStack
+  VStack,
+  Image
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import { Icons } from './Icons';
@@ -93,13 +94,20 @@ export function SideMenu({ isOpen, setIsOpen, homeRef, aboutRef, productsRef, co
               >
                 Contato
               </Button>
+              <Image
+                src="/images/svgs/logo.svg"
+                h="120px"
+                w="120px"
+                top="0"
+                alt='L&A Comercial Logo'
+              />
             </VStack>
           </DrawerBody>
           <DrawerFooter justifyContent="center">
             <HStack justifyContent="center">
-              <Icons to="/" icon={<FaInstagram size="40px" color="#e7001c" />} />
-              <Icons to="/" icon={<FaFacebookSquare size="40px" color="#e7001c" />} />
-              <Icons to="/" icon={<FaWhatsapp size="40px" color="#e7001c" />} />
+              <Icons to="/" icon={<FaInstagram size="40px" color="#bc140c" />} />
+              <Icons to="/" icon={<FaFacebookSquare size="40px" color="#bc140c" />} />
+              <Icons to="/" icon={<FaWhatsapp size="40px" color="#bc140c" />} />
             </HStack>
           </DrawerFooter>
         </DrawerContent>

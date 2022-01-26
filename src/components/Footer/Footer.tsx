@@ -1,4 +1,4 @@
-import React, { RefObject, useState } from 'react';
+import React, { useState } from 'react';
 import { Box, Button, chakra, Flex, Grid, HStack, Image, Text, useMediaQuery } from '@chakra-ui/react';
 import { InputControl } from '../Form/InputControl';
 import { Icons } from '..';
@@ -24,9 +24,20 @@ export const Footer = (): JSX.Element => {
       >
         <Flex>
           <Flex w={isSmallScreen ? "100%" : "90%"} alignItems="center" justifyContent="center">
-            <Image src="/images/body/logo.png" w={isSmallScreen ? "50%" : "75%"} h={isSmallScreen ? "50%" : "75%"} />
+            <Image
+              src="/images/svgs/logo-footer.svg"
+              h="200px"
+              w="200px"
+              top="0"
+              alt='L&A Comercial Logo'
+            />
           </Flex>
-          <Box width="3px" height="75%" my="auto" bgGradient="linear(to-t, transparent, #ccc, #fff, #ccc, transparent)" />
+          {!isSmallScreen && <Box
+            width="3px"
+            height="75%"
+            my="auto"
+            bgGradient="linear(to-t, transparent, #ccc, #fff, #ccc, transparent)"
+          />}
         </Flex>
         <Box padding={isSmallScreen ? "1em" : "none"}>
           <form>

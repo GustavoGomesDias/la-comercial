@@ -40,17 +40,26 @@ export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScrol
       }}
     >
       <HStack justifyContent="flex-end">
-        <Icons to="/" icon={<FaInstagram color="#e7001c" />} />
-        <Icons to="/" icon={<FaFacebookSquare color="#e7001c" />} />
-        <Icons to="/" icon={<FaWhatsapp color="#e7001c" />} />
+        <Icons to="/" icon={<FaInstagram color="#bc140c" />} />
+        <Icons to="/" icon={<FaFacebookSquare color="#bc140c" />} />
+        <Icons to="/" icon={<FaWhatsapp color="#bc140c" />} />
       </HStack>
-      <Image src="/images/body/logo.png" h="60px" w="65px" position="absolute" zIndex={11} />
+      {!isSmallScreen && <Image
+        src="/images/svgs/logo.svg" 
+        h="120px"
+        w="120px"
+        top="0"
+        ml={10}
+        position="absolute"
+        zIndex={11}
+        alt='L&A Comercial Logo'
+      />}
       <HStack
         spacing={3}
         paddingRight="300px"
         mr={1}
         display={{ base: "none", lg: "inline-flex" }}
-        ml={20}
+        ml={40}
       >
         <Button
           variant="link"

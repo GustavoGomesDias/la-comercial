@@ -1,34 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# L&A Comercial
 
-## Getting Started
+Neste repositório contém o código do web site da [L&A Comcercial](#).
 
-First, run the development server:
+- Este é um projeto iniciado por mim ([@GustavoGomesDias](https://github.com/GustavoGomesDias)). Em caso de dúvidas, é possível me contatar pelo email 01gustavodias@gmail.com.
+- Para acessar informações de login em serviços utilizados, procure o Júnior (ou eu mesmo) pois elas estão nas Planilhas salvas no email da empresa que eu utilizava: gustavo@artcom.com.br
 
+## .env
+
+
+## Tecnologias usadsa
+- TypeScript
+
+- Frontend
+  - Next js
+  - Chakra UI
+
+- Envio de emails
+  - Nodemailer
+
+- Deploy
+
+## Como rodar o projeto
+**ATENÇÃO: As informações aqui são para quem for fazer o Deploy**
+
+1. Build o projeto
 ```bash
-npm run dev
-# or
-yarn dev
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Para startar e manter o projeto rodando em uma VM, eu recomendo o pm2.
+  1. Instalando o pm2 globalmente
+  ```bash
+  npm install pm2 -g
+  ```
+  2. Startar o projeto
+  ```bash
+  pm2 start npm --name next -- start
+  ```
+  3. Salve as configurações
+  ```bash
+  pm2 save
+  ```
+3. Existem mais ferramentas que talvez sejam necessárias (como `NGINX`), mas não vai constar aqui.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## WorkFlow
+WorkFlow que eu segui no projeto
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+---
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Crie abra uma [Issue](https://github.com/Artcom-com/artcomweb/issues) no repositório
+2. Coloque ela em algum [Project](https://github.com/Artcom-com/artcomweb/projects)
+3. Crie uma `branch` que contém um nome descritivo com o que você está fazendo
+```bash
+git branch <nome_descritivo>
+```
+4. Mude para ela
+```bash
+git checkout <nome_branch>
+```
+5. Commit e dê push nessa `branch`
+```bash
+git add .
+```
 
-## Learn More
+**Prorure sobre [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/)**
+```bash
+git commit -m "feat|refactor|test|fix: mensagem descritiva  em inglês"
+```
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+git push origin <nome_branch>
+```
+6. Abra um PR no repositório referente a branch criada
+7. Revise esse PR
+8. Caso esteja tudo certo, mergeie o PR junto da `main`
+9. Faça o pull para a `main` local
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**ATENÇÃO: Só se deve fazer PULL na main, nada de PUSH. Para PUSH, se cria PR**
