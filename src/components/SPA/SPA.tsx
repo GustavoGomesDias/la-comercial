@@ -5,6 +5,7 @@ import { Header, Banner, Home as HomeContent, Footer, Products } from '../index'
 import { About } from '../About/About';
 import { useState } from 'react';
 import { Difference } from '../Difference/Diferremce';
+import Carousel from '../Carousel/Carousel';
 
 const SPA = (): JSX.Element => {
   const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
@@ -32,6 +33,16 @@ const SPA = (): JSX.Element => {
   const productsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
+  const homeCarouselList: JSX.Element[] = [
+    <Banner
+      key={0}
+      content={<HomeContent />}
+      height={isSmallScreen ? "200px" : "400px"}
+      urlImg='/images/body/home.jpg'
+    />,
+  ];
+
+
   return (
     <>
       <Header
@@ -44,7 +55,8 @@ const SPA = (): JSX.Element => {
       <div ref={homeRef} style={{
         marginBottom: "40px"
       }} />
-      <Banner content={<HomeContent />} height={isSmallScreen ? "200px" : "400px"} urlImg='/images/body/home.jpg' />
+      <Carousel contentList={homeCarouselList} />
+      
       <div ref={aboutRef} style={{
         marginBottom: "80px"
       }} />

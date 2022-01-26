@@ -1,7 +1,7 @@
 import React from 'react';
 import { useMediaQuery } from '@chakra-ui/react';
 import { SmallScreen } from './SmallScreen';
-import Carousel from './Carousel/Carousel';
+import Carousel from '../Carousel/Carousel';
 import { Card } from './Card';
 
 export const Products = (): JSX.Element => {
