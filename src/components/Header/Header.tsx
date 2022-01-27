@@ -39,6 +39,7 @@ export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScrol
         opacity: '1'
       }}
     >
+
       <HStack px="5em" display={{ base: "none", lg: "flex" }}>
         <Image
           src="/images/svgs/logo.svg"
@@ -84,27 +85,39 @@ export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScrol
           <Icons to="/" icon={<FaWhatsapp color="#bc140c" />} />
         </HStack>}
       </HStack>
-      <Flex justifyContent="flex-end" mt="2">
-        <IconButton
-          display={{ base: "flex", lg: "none" }}
-          aria-label="Abrir Manu"
-          fontSize="20px"
-          color={"blackAlpha.800"}
-          _hover={{ bg: "#CCC" }}
-          _focus={{ boxShadow: "outline" }}
-          variant="ghost"
-          icon={<AiOutlineMenu />}
-          onClick={(e) => handleIsOpen(e)}
-        />
-        <SideMenu
-          isOpen={isOpen}
-          setIsOpen={setIsOpen}
-          handleScroll={handleScroll}
-          homeRef={homeRef}
-          aboutRef={aboutRef}
-          productsRef={productsRef}
-          contactRef={contactRef}
-        />
+      <Flex w="full">
+        {isSmallScreen && <Image
+          src="/images/svgs/logo.svg"
+          h="50px"
+          w="80px"
+          alt='L&A Comercial Logo'
+          onClick={() => handleScroll(homeRef)}
+          cursor="pointer"
+          ml={6}
+        />}
+
+        <Flex justifyContent="flex-end" w="full">
+          <IconButton
+            display={{ base: "flex", lg: "none" }}
+            aria-label="Abrir Manu"
+            fontSize="20px"
+            color={"blackAlpha.800"}
+            _hover={{ bg: "#CCC" }}
+            _focus={{ boxShadow: "outline" }}
+            variant="ghost"
+            icon={<AiOutlineMenu />}
+            onClick={(e) => handleIsOpen(e)}
+          />
+          <SideMenu
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            handleScroll={handleScroll}
+            homeRef={homeRef}
+            aboutRef={aboutRef}
+            productsRef={productsRef}
+            contactRef={contactRef}
+          />
+        </Flex>
       </Flex>
     </chakra.header>
   );
