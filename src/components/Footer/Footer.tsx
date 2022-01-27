@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, chakra, Flex, Grid, HStack, Image, Text, useMediaQuery } from '@chakra-ui/react';
+import { Box, Button, chakra, Flex, Grid, HStack, Image, Link, Text, useMediaQuery } from '@chakra-ui/react';
 import { InputControl } from '../Form/InputControl';
 import { Icons } from '..';
 import { FaFacebookSquare, FaInstagram, FaWhatsapp } from 'react-icons/fa';
@@ -36,7 +36,7 @@ export const Footer = (): JSX.Element => {
             width="3px"
             height="75%"
             my="auto"
-            bgGradient="linear(to-t, transparent, #ccc, #fff, #ccc, transparent)"
+            bg="#fff"
           />}
         </Flex>
         <Box padding={isSmallScreen ? "1em" : "none"}>
@@ -81,8 +81,9 @@ export const Footer = (): JSX.Element => {
                   fontWeight: "bold"
                 }}
               >
-                55.27.3061-7474 | 55.27.99942-0858
-              </span><br />
+                55.27.3061-7474<br />
+                55.27.99942-0858
+              </span><br /><br />
               Rua Ivan Neiva Neves, 611, Edifíco Verano Mall,<br />
               Sala 201, Residencial Coqueiral, Vila Velha/ES
             </Text>
@@ -102,9 +103,11 @@ export const Footer = (): JSX.Element => {
         bgColor="#96151b"
         padding={isSmallScreen ? "0.5em" : "0"}
       >
-        <Text color="#fff" textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>comerciallea.com.br</Text> <Circle />
+        <Text color="#fff" textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>Comercial L&A 2022</Text> <Circle />
         <Text color="#fff" textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>Todos os direitos reservados</Text> <Circle />
-        <Text color="#fff" textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>Comercial L&A 2022</Text>
+        <Text color="#fff" textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>
+          Feito por <Link href='https://www.artcom.com.br' isExternal textDecor="underline">Artcom</Link>
+          </Text>
       </Flex>
     </Flex>
   );

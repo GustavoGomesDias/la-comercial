@@ -35,6 +35,7 @@ export const Card = ({ header, imgPath }: HandleHoverCard): JSX.Element => {
         p="0.3em"
         fontWeight="medium"
         borderBottom="1px solid #e0d5d6"
+        color="#fff"
       >
         {header}
       </chakra.h3>

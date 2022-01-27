@@ -36,6 +36,12 @@ const Fonts = () => (
       font-style: italic;
       font-weight: lighter;
     }
+    @font-face {
+      font-family: 'Nexa';
+      src: url('../../assets/fonts/Nexa-XBold.otf') format("opentype");
+      font-style: normal;
+      font-weight: bolder;
+    }
       `}
   />
 );

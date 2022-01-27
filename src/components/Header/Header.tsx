@@ -27,8 +27,8 @@ export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScrol
 
   return (
     <chakra.header
-      bgGradient="linear(to-b, #f4f4f4, #fff, #e4e4e4)"
-      px={{ base: 2, sm: 2 }}
+      bg="#e4e4e4"
+      // px={{ base: 2, sm: 2 }}
       pt={3}
       w="full"
       top={0}
@@ -39,54 +39,50 @@ export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScrol
         opacity: '1'
       }}
     >
-      {!isSmallScreen && <HStack justifyContent="flex-end">
-        <Icons to="/" icon={<FaInstagram color="#bc140c" />} />
-        <Icons to="/" icon={<FaFacebookSquare color="#bc140c" />} />
-        <Icons to="/" icon={<FaWhatsapp color="#bc140c" />} />
-      </HStack>}
-      <Image
-        src="/images/svgs/logo.svg" 
-        h="120px"
-        w="120px"
-        top="0"
-        ml={10}
-        position="absolute"
-        zIndex={11}
-        alt='L&A Comercial Logo'
-        onClick={() => handleScroll(homeRef)}
-        cursor="pointer"
-      />
-      <HStack
-        spacing={3}
-        paddingRight="300px"
-        mr={1}
-        display={{ base: "none", lg: "inline-flex" }}
-        ml={40}
-      >
-        <Button
-          variant="link"
+      <HStack px="5em" display={{ base: "none", lg: "flex" }}>
+        <Image
+          src="/images/svgs/logo.svg"
+          h="100px"
+          w="130px"
+          alt='L&A Comercial Logo'
           onClick={() => handleScroll(homeRef)}
-        >
-          Home
-        </Button>
-        <Button
-          variant="link"
-          onClick={() => handleScroll(aboutRef)}
-        >
-          Sobre
-        </Button>
-        <Button
-          variant="link"
-          onClick={() => handleScroll(productsRef)}
-        >
-          Produto
-        </Button>
-        <Button
-          variant="link"
-          onClick={() => handleScroll(contactRef)}
-        >
-          Contato
-        </Button>
+          cursor="pointer"
+        />
+        <HStack w="100%" justifyContent="center" spacing={8}>
+          <Button
+            variant="link"
+            onClick={() => handleScroll(homeRef)}
+            color="#646464"
+          >
+            Home
+          </Button>
+          <Button
+            variant="link"
+            onClick={() => handleScroll(aboutRef)}
+            color="#646464"
+          >
+            Sobre
+          </Button>
+          <Button
+            variant="link"
+            onClick={() => handleScroll(productsRef)}
+            color="#646464"
+          >
+            Produto
+          </Button>
+          <Button
+            variant="link"
+            onClick={() => handleScroll(contactRef)}
+            color="#646464"
+          >
+            Contato
+          </Button>
+        </HStack>
+        {!isSmallScreen && <HStack justifyContent="flex-end" w="30%">
+          <Icons to="/" icon={<FaInstagram color="#bc140c" />} />
+          <Icons to="/" icon={<FaFacebookSquare color="#bc140c" />} />
+          <Icons to="/" icon={<FaWhatsapp color="#bc140c" />} />
+        </HStack>}
       </HStack>
       <Flex justifyContent="flex-end" mt="2">
         <IconButton

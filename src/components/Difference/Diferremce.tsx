@@ -25,7 +25,7 @@ export const Difference = (): JSX.Element => {
         />
         <Item
           alt='Delivery representation image'
-          boxSize="2em"
+          boxSize={handleControlBoxSize}
           content='Logística e entrega mais rápida'
           fontSize={handleControlTxtSize}
           imgPath='/images/svgs/delivery.svg'

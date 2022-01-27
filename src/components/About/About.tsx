@@ -5,38 +5,54 @@ import { AboutList } from './AboutList';
 export const About = (): JSX.Element => {
   return (
     <Flex
-      w="full"
+      w="100%"
       ml="16%"
-      mt="5%"
+      h="100%"
+      justifyContent="center"
       flexDir="column"
       overflowX="hidden"
+      transform="scaleX(-1)"
+      alignItems="flex-end"
     >
-      <chakra.h1
-        fontSize={["1.5em", "1.6em", "4em"]}
-        // color="#fff"
-        lineHeight="1"
+      <Flex
+        flexDir="column"
+        overflowX="hidden"
+        
+        w="50%"
+        px={5}
+        py={1}
+        bgGradient={"linear(to-r, #8f1207, #c0140c, #8f1207)"}
       >
-        MAIS
-        <br />
-        <span
-          style={{
-            fontWeight: 'bold'
-          }}
+        <chakra.h1
+          fontSize={["1em", "1em", "1.8em", "4em"]}
+          // color="#fff"
+          lineHeight="1"
+          px={5}
+          py={1}
+          color="#fff"
         >
-          QUALIDADE
-        </span>
-        <br />
-        E MUITO MAIS
-        <br />
-        <span
-          style={{
-            fontWeight: 'bold'
-          }}
-        >
-          RENDIMENTO
-        </span>
-      </chakra.h1>
-      <AboutList />
+          MAIS
+          <br />
+          <span
+            style={{
+              fontWeight: 'bolder'
+            }}
+          >
+            QUALIDADE
+          </span>
+          <br />
+          E MUITO MAIS
+          <br />
+          <span
+            style={{
+              fontWeight: 'bolder'
+            }}
+          >
+            RENDIMENTO
+          </span>
+        </chakra.h1>
+        <AboutList />
+      </Flex>
     </Flex>
   );
 }

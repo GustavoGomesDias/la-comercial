@@ -73,7 +73,7 @@ const SPA = (): JSX.Element => {
       <div ref={aboutRef} style={{
         marginBottom: "80px"
       }} />
-      <Banner content={<About />} height={isSmallScreen ? "300px" : "600px"} urlImg="/images/body/about.jpg" />
+      <Banner content={<About />} isAbout height={isSmallScreen ? "300px" : "600px"} urlImg="/images/body/about.jpg" />
       <Difference />
       <div ref={productsRef} style={{
         marginBottom: "20px"

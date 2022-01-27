@@ -5,10 +5,11 @@ export interface BannerProps {
   urlImg: string
   svgText?: string
   content: JSX.Element | JSX.Element[]
-  height: string
+  height: string,
+  isAbout?: boolean
 }
 
-export const Banner = ({ urlImg, content, svgText, height }: BannerProps): JSX.Element => {
+export const Banner = ({ urlImg, content, svgText, height, isAbout }: BannerProps): JSX.Element => {
   const [isSmallScreen] = useMediaQuery('(max-width: 800px)');
   const [isLargeScreen] = useMediaQuery('(max-width: 1200px)');
 
@@ -30,6 +31,7 @@ export const Banner = ({ urlImg, content, svgText, height }: BannerProps): JSX.E
       justifyContent="flex-start"
       flexDir="column"
       overflowX="hidden"
+      transform={isAbout !== undefined && isAbout ? "scaleX(-1)" : ""}
     >
       {svgText !== undefined && <svg height="600px" width="100%">
         <text
@@ -44,7 +46,6 @@ export const Banner = ({ urlImg, content, svgText, height }: BannerProps): JSX.E
           {svgText}
         </text>
       </svg>}
-
       {content}
     </Flex >
   );
