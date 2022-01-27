@@ -7,7 +7,7 @@ export const Difference = (): JSX.Element => {
   const [isLargeScreen] = useMediaQuery('(max-width: 1200px)');
   const handleControlTxtSize = isSmallScreen ? "20px" : (isLargeScreen ? "26px": "30px");
   const handleControlPadding = isSmallScreen ? "0.5em" : (isLargeScreen ? "1em": "7em");
-  const handleControlBoxSize = isSmallScreen ? "1.7em" : (isLargeScreen ? "3em": "5em");
+  const handleControlBoxSize = isSmallScreen ? "2.5em" : (isLargeScreen ? "3em": "5em");
 
   return (
     <Grid
