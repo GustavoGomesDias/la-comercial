@@ -15,12 +15,15 @@ export const Footer = (): JSX.Element => {
       mt={isSmallScreen ? "100px" : "200px"}
       bgGradient="linear(to-br, #c8242c, #d31b1f)"
       flexDir="column"
+      alignItems="center"
+     
     >
       <Grid
         templateColumns={isSmallScreen ? "none" : 'repeat(3, 1fr)'}
         templateRows={isSmallScreen ? 'repeat(3, 0.5fr)' : 'none'}
         my="3em"
         gap={8}
+        w={isSmallScreen ? "100%" : "90%"}
       >
         <Flex>
           <Flex w={isSmallScreen ? "100%" : "90%"} alignItems="center" justifyContent="center">
@@ -118,6 +121,7 @@ export const Footer = (): JSX.Element => {
         h="50px"
         bgColor="#96151b"
         padding={isSmallScreen ? "0.5em" : "0"}
+        w="full"
       >
         <Text color="#fff" textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>Comercial L&A 2022</Text> <Circle />
         <Text color="#fff" textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>Todos os direitos reservados</Text> <Circle />

@@ -3,7 +3,7 @@ import { ListItem, UnorderedList } from '@chakra-ui/react';
 
 export const AboutList = (): JSX.Element => {
   return (
-    <UnorderedList color="#fff" px={5} mt={2} spacing={3} fontSize={["0.8em", "0.8rem", "1.5rem"]}>
+    <UnorderedList w="100%"color="#fff" mt={2} spacing={1} fontSize={["0.8em", "0.8rem", "1.5rem"]}>
       <ListItem>
         VIDROS AUTOMOTIVOS
       </ListItem>

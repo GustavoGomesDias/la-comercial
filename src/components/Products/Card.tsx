@@ -47,21 +47,22 @@ export const Card = ({ header, imgPath }: HandleHoverCard): JSX.Element => {
       <Flex alignItems="center" justifyContent="center" flexDir="column" h="100%">
         <Image
           src="/images/body/betaflex.png"
-          w={isSmallScreen ? "45%" : "50%"}
-          h={isSmallScreen ? "45%" : "50%"}
+          w={isSmallScreen ? "45%" : "45%"}
+          h={isSmallScreen ? "45%" : "45%"}
           alt='L&A Comercial Logo'
         />
-        <Link href='#' isExternal>
+        <Link href='#' isExternal width="85%">
           <Button
             bg='#25D366'
             textColor="#fff"
-            size={isSmallScreen ? "md" : "lg"}
+            // size={isSmallScreen ? "md" : "100%"}
+            width="100%"
             mt={5}
             _hover={{
               bg: '#075E54'
             }}
           >
-            <FaWhatsapp color="#fff" style={{ marginRight: "5px" }} /> Conheça
+            <FaWhatsapp color="#fff" style={{ marginRight: "5px" }} size={40}/> Conheça
           </Button>
         </Link>
       </Flex>

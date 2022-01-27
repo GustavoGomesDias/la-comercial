@@ -40,7 +40,7 @@ export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScrol
       }}
     >
 
-      <HStack px="5em" display={{ base: "none", lg: "flex" }}>
+      <HStack px="8em" display={{ base: "none", lg: "flex" }} justifyContent="space-between">
         <Image
           src="/images/svgs/logo.svg"
           h="100px"
@@ -54,6 +54,7 @@ export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScrol
             variant="link"
             onClick={() => handleScroll(homeRef)}
             color="#646464"
+            fontSize={["xl", "xl", "xl", "xl", "x-large"]}
           >
             Home
           </Button>
@@ -61,6 +62,7 @@ export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScrol
             variant="link"
             onClick={() => handleScroll(aboutRef)}
             color="#646464"
+            fontSize={["xl", "xl", "xl", "xl", "x-large"]}
           >
             Sobre
           </Button>
@@ -68,6 +70,7 @@ export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScrol
             variant="link"
             onClick={() => handleScroll(productsRef)}
             color="#646464"
+            fontSize={["xl", "xl", "xl", "xl", "x-large"]}
           >
             Produto
           </Button>
@@ -75,14 +78,15 @@ export const Header = ({ homeRef, aboutRef, productsRef, contactRef, handleScrol
             variant="link"
             onClick={() => handleScroll(contactRef)}
             color="#646464"
+            fontSize={["xl", "xl", "xl", "xl", "x-large"]}
           >
             Contato
           </Button>
         </HStack>
         {!isSmallScreen && <HStack justifyContent="flex-end" w="30%">
-          <Icons to="/" icon={<FaInstagram color="#bc140c" />} />
-          <Icons to="/" icon={<FaFacebookSquare color="#bc140c" />} />
-          <Icons to="/" icon={<FaWhatsapp color="#bc140c" />} />
+          <Icons to="/" icon={<FaInstagram color="#bc140c" size={30} />} />
+          <Icons to="/" icon={<FaFacebookSquare color="#bc140c" size={30} />} />
+          <Icons to="/" icon={<FaWhatsapp color="#bc140c" size={30} />} />
         </HStack>}
       </HStack>
       <Flex w="full">
