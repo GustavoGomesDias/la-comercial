@@ -1,11 +1,12 @@
 import React from 'react';
 import { RefObject, useRef } from 'react';
 import { useMediaQuery } from '@chakra-ui/react';
-import { Header, Banner, Home as HomeContent, Footer, Products } from '../index';
+import { Header, Banner, Footer, Products } from '../index';
 import { About } from '../About/About';
 import { useState } from 'react';
 import { Difference } from '../Difference/Diferremce';
 import Carousel from '../Carousel/Carousel';
+import { HomeContent } from '../Home/Content';
 
 const SPA = (): JSX.Element => {
   const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
@@ -36,9 +37,21 @@ const SPA = (): JSX.Element => {
   const homeCarouselList: JSX.Element[] = [
     <Banner
       key={0}
-      content={<HomeContent />}
+      content={<HomeContent h1={'ADESIVOS'} content='DISTRIBUIÇÃO PARA TODO O BRASIL'  />}
       height={isSmallScreen ? "200px" : "400px"}
       urlImg='/images/body/home.jpg'
+    />,
+    <Banner
+      key={0}
+      content={<HomeContent h1={'SELANTES'} content='DISTRIBUIÇÃO PARA TODO O BRASIL'  />}
+      height={isSmallScreen ? "200px" : "400px"}
+      urlImg='/images/body/home2.jpg'
+    />,
+    <Banner
+      key={0}
+      content={<HomeContent h1={'FERRAMENTAS'} content='DISTRIBUIÇÃO PARA TODO O BRASIL'  />}
+      height={isSmallScreen ? "200px" : "400px"}
+      urlImg='/images/body/home3.jpg'
     />,
   ];
 
