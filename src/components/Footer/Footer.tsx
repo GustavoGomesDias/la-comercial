@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, chakra, Flex, Grid, HStack, Image, Link, Text, useMediaQuery } from '@chakra-ui/react';
+import { Box, Button, chakra, Flex, FormControl, FormLabel, Grid, HStack, Image, Link, Text, Textarea, useMediaQuery } from '@chakra-ui/react';
 import { InputControl } from '../Form/InputControl';
 import { Icons } from '..';
 import { FaFacebookSquare, FaInstagram, FaWhatsapp } from 'react-icons/fa';
@@ -41,7 +41,7 @@ export const Footer = (): JSX.Element => {
         </Flex>
         <Box padding={isSmallScreen ? "1em" : "none"}>
           <form>
-            <chakra.h2 color="#fff" fontSize="24px">Fale Conosco</chakra.h2>
+            <chakra.h2 color="#fff" fontSize="24px" textAlign="center">Fale Conosco</chakra.h2>
             <Grid templateColumns='repeat(2, 1fr)' gap={1}>
               <InputControl id='name' label='Nome' onChangehandle={setName} placeholder='Nome' />
               <InputControl id='name' label='E-mail' onChangehandle={setName} placeholder='E-mail' />
@@ -50,6 +50,22 @@ export const Footer = (): JSX.Element => {
               <InputControl id='name' label='Cidade' onChangehandle={setName} placeholder='Cidade' />
               <InputControl id='name' label='Estado' onChangehandle={setName} placeholder='Estado' />
             </Grid>
+
+            <FormControl
+              id='message'
+              isRequired
+              w="100%"
+              mt={2}
+            >
+              <FormLabel display="none">Mensagem</FormLabel>
+              <Textarea
+                bg="#fff"
+                borderRadius="none"
+                placeholder="Mensagem"
+              />
+            </FormControl>
+
+
 
             <Flex w="100%" justifyContent="flex-end" mt="5px">
               <Button
@@ -107,7 +123,7 @@ export const Footer = (): JSX.Element => {
         <Text color="#fff" textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>Todos os direitos reservados</Text> <Circle />
         <Text color="#fff" textAlign="center" my="auto" fontSize={isSmallScreen ? "0.5em" : "0.7em"}>
           Feito por <Link href='https://www.artcom.com.br' isExternal textDecor="underline">Artcom</Link>
-          </Text>
+        </Text>
       </Flex>
     </Flex>
   );
