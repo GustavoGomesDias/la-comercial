@@ -17,6 +17,7 @@ export const SmallScreen = (): JSX.Element => {
         handleMouseEnter={() => { }}
         handleMouseOut={() => { }}
         index={0}
+        imgPath="/images/body/card1.jpg"
       />
       <Card
         header="SELANTES"
@@ -24,6 +25,7 @@ export const SmallScreen = (): JSX.Element => {
         handleMouseEnter={() => { }}
         handleMouseOut={() => { }}
         index={0}
+        imgPath="/images/body/card2.jpg"
       />
       <Card
         header="FERRAMENTAS"
@@ -31,6 +33,7 @@ export const SmallScreen = (): JSX.Element => {
         handleMouseEnter={() => { }}
         handleMouseOut={() => { }}
         index={0}
+        imgPath="/images/body/card3.jpg"
       />
     </Stack>
   );

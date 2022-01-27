@@ -10,9 +10,10 @@ export interface HandleHoverCard {
   handleMouseEnter: (index: number) => void
   handleMouseOut: () => void
   header: string
+  imgPath: string
 }
 
-export const Card = ({ handleMouseEnter, handleMouseOut, index, header, cardIndex }: HandleHoverCard): JSX.Element => {
+export const Card = ({ handleMouseEnter, handleMouseOut, index, header, cardIndex, imgPath }: HandleHoverCard): JSX.Element => {
   const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
   const [isLargeScreen] = useMediaQuery('(max-width: 1220px)');
 
@@ -30,9 +31,10 @@ export const Card = ({ handleMouseEnter, handleMouseOut, index, header, cardInde
       onMouseEnter={() => handleMouseEnter(index)}
       onMouseOut={handleMouseOut}
       bgBlendMode="multiply"
-      bgImage="linear-gradient(to right, #a41c1c, #a41c1c, #a41c1c), url('/images/body/card2.jpg') !important"
+      bgImage={`linear-gradient(to right, #a41c1c, #a41c1c, #a41c1c), url('${imgPath}') !important`}
       bgRepeat="no-repeat"
-      bgSize="cover"
+      objectFit="cover"
+      bgSize="100% 100%"
       bgPos=""
       height={isSmallScreen ? "350px" : "600px"}
     >
