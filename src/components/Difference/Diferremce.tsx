@@ -13,6 +13,7 @@ export const Difference = (): JSX.Element => {
     <Grid
       templateColumns="repeat(2, 1fr)"
       alignItems="center"
+      justifyContent="center"
       padding={handleControlPadding}
       gap={2}
     >

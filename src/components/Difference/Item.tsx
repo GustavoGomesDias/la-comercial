@@ -12,10 +12,10 @@ export interface ItemProps {
 
 export const Item = ({ imgPath, fontSize, boxSize, content, alt }: ItemProps): JSX.Element => {
   return (
-    <Flex w="full">
+    <Flex w="full" justifyContent="center">
       <Flex
-        alignItems="center"
-        mr="5px"
+        mr="15px"
+        justifyContent="center"
       >
         <Image
           src={imgPath}
@@ -29,6 +29,7 @@ export const Item = ({ imgPath, fontSize, boxSize, content, alt }: ItemProps): J
         display: "flex",
         alignItems: "center",
         fontSize: fontSize,
+        width: "100%",
       }}>
         {content}
       </span>
