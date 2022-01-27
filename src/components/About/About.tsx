@@ -24,7 +24,7 @@ export const About = (): JSX.Element => {
         bgGradient={"linear(to-r, #8f1207, #c0140c, #8f1207)"}
       >
         <chakra.h1
-          fontSize={["1em", "1em", "1.8em", "4em"]}
+          fontSize={["0.8em", "1em", "1.8em", "4em"]}
           // color="#fff"
           lineHeight="1"
           px={5}
