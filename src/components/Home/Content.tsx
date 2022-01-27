@@ -10,7 +10,7 @@ export const HomeContent = ({ h1, content }: HomeContentProps): JSX.Element => {
   const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
   const [isLargeScreen] = useMediaQuery('(max-width: 1080px)');
 
-  const handleControlH1fontSize = isSmallScreen ? "40px" : (isLargeScreen ? "75px": "100px");
+  const handleControlH1fontSize = isSmallScreen ? "37px" : (isLargeScreen ? "75px": "100px");
   const handleControlH2fontSize = isSmallScreen ? "15px" : (isLargeScreen ? "22px": "29.5px");
   const handleCotrolMt = isSmallScreen ? "11%" : (isLargeScreen ? "10%": "5%");
 
