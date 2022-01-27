@@ -1,5 +1,5 @@
 import React from 'react';
-import { chakra, Flex, useBreakpointValue, useMediaQuery } from '@chakra-ui/react';
+import { chakra, Flex, useMediaQuery } from '@chakra-ui/react';
 
 export const Home = (): JSX.Element => {
   const [isSmallScreen] = useMediaQuery('(max-width: 768px)');

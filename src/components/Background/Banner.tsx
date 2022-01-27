@@ -1,5 +1,5 @@
 import React from 'react';
-import { chakra, Flex, useBreakpointValue, useMediaQuery } from '@chakra-ui/react';
+import { Flex, useMediaQuery } from '@chakra-ui/react';
 
 export interface BannerProps {
   urlImg: string

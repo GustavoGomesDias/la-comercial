@@ -9,28 +9,16 @@ export const Products = (): JSX.Element => {
   const contentCarouselItem = [
     <Card
       header="ADESIVOS"
-      cardIndex={0}
-      handleMouseEnter={() => { }}
-      handleMouseOut={() => { }}
-      index={0}
       key={0}
       imgPath="/images/body/card1.jpg"
     />,
     <Card
       header="SELANTES"
-      cardIndex={0}
-      handleMouseEnter={() => { }}
-      handleMouseOut={() => { }}
-      index={0}
       key={1}
       imgPath="/images/body/card2.jpg"
     />,
     <Card
       header="FERRAMENTAS"
-      cardIndex={0}
-      handleMouseEnter={() => { }}
-      handleMouseOut={() => { }}
-      index={0}
       key={2}
       imgPath="/images/body/card3.jpg"
     />

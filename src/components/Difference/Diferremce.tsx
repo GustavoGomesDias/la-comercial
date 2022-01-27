@@ -1,6 +1,5 @@
 import React from 'react';
-import { Box, Flex, Grid, Image, useMediaQuery } from '@chakra-ui/react';
-import { Circle } from '../Footer/Circle';
+import { Grid, useMediaQuery } from '@chakra-ui/react';
 import { Item } from './Item';
 
 export const Difference = (): JSX.Element => {
@@ -27,7 +26,7 @@ export const Difference = (): JSX.Element => {
         <Item
           alt='Delivery representation image'
           boxSize="2em"
-          content='Logística facilitada e entrega mais rápida'
+          content='Logística e entrega mais rápida'
           fontSize={handleControlTxtSize}
           imgPath='/images/svgs/delivery.svg'
         />

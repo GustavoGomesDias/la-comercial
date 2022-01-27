@@ -5,31 +5,21 @@ import { FaWhatsapp } from 'react-icons/fa';
 // TODO: user 'https://wa.me/<number>' no botão do whats
 
 export interface HandleHoverCard {
-  index: number
-  cardIndex: number
-  handleMouseEnter: (index: number) => void
-  handleMouseOut: () => void
   header: string
   imgPath: string
 }
 
-export const Card = ({ handleMouseEnter, handleMouseOut, index, header, cardIndex, imgPath }: HandleHoverCard): JSX.Element => {
+export const Card = ({ header, imgPath }: HandleHoverCard): JSX.Element => {
   const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
   const [isLargeScreen] = useMediaQuery('(max-width: 1220px)');
 
   const handleControlH3fontSize = isSmallScreen ? "24px" : (isLargeScreen ? "36px" : "48px");
-  const handleTitleColorInSmallScreen = isSmallScreen ?
-    "#fff"
-    :
-    (cardIndex === index ? "#fff" : "#a41c1c");
 
   return (
     <Flex
       w="full"
       alignItems="center"
       flexDir="column"
-      onMouseEnter={() => handleMouseEnter(index)}
-      onMouseOut={handleMouseOut}
       bgBlendMode="multiply"
       bgImage={`linear-gradient(to right, #a41c1c, #a41c1c, #a41c1c), url('${imgPath}') !important`}
       bgRepeat="no-repeat"
@@ -45,7 +35,6 @@ export const Card = ({ handleMouseEnter, handleMouseOut, index, header, cardInde
         p="0.3em"
         fontWeight="medium"
         borderBottom="1px solid #e0d5d6"
-        color={handleTitleColorInSmallScreen}
       >
         {header}
       </chakra.h3>

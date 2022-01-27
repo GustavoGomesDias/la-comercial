@@ -13,26 +13,14 @@ export const SmallScreen = (): JSX.Element => {
     >
       <Card
         header="ADESIVOS"
-        cardIndex={0}
-        handleMouseEnter={() => { }}
-        handleMouseOut={() => { }}
-        index={0}
         imgPath="/images/body/card1.jpg"
       />
       <Card
         header="SELANTES"
-        cardIndex={0}
-        handleMouseEnter={() => { }}
-        handleMouseOut={() => { }}
-        index={0}
         imgPath="/images/body/card2.jpg"
       />
       <Card
         header="FERRAMENTAS"
-        cardIndex={0}
-        handleMouseEnter={() => { }}
-        handleMouseOut={() => { }}
-        index={0}
         imgPath="/images/body/card3.jpg"
       />
     </Stack>
