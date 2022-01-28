@@ -24,7 +24,7 @@ export const HomeContent = ({ h1, content }: HomeContentProps): JSX.Element => {
       zIndex={2}
       position="absolute"
       mt={handleCotrolMt}
-      left="5%"
+      left="12%"
       overflowX="hidden"
     >
       <chakra.h1

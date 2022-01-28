@@ -5,8 +5,9 @@ import { Item } from './Item';
 export const Difference = (): JSX.Element => {
   const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
   const [isLargeScreen] = useMediaQuery('(max-width: 1200px)');
-  const handleControlTxtSize = isSmallScreen ? "20px" : (isLargeScreen ? "26px": "30px");
-  const handleControlPadding = isSmallScreen ? "0.5em" : (isLargeScreen ? "1em": "7em");
+  const handleControlTxtSize = isSmallScreen ? "18px" : (isLargeScreen ? "26px": "30px");
+  const handleControlPaddingY = isSmallScreen ? "0.5em" : (isLargeScreen ? "1em": "7em");
+  const handleControlPaddingX = isSmallScreen ? "1.7em" : (isLargeScreen ? "1em": "9em");
   const handleControlBoxSize = isSmallScreen ? "2.5em" : (isLargeScreen ? "3em": "5em");
 
   return (
@@ -14,7 +15,8 @@ export const Difference = (): JSX.Element => {
       templateColumns="repeat(2, 1fr)"
       alignItems="center"
       justifyContent="center"
-      padding={handleControlPadding}
+      py={handleControlPaddingY}
+      px={handleControlPaddingX}
       gap={2}
     >
       <Item
