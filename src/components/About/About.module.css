@@ -1,0 +1,25 @@
+.text-animation {
+  animation: 1s move;
+}
+
+.list-animation {
+  animation: 1s moveList;
+}
+
+@keyframes move {
+  from {
+      margin-left: -3000px;
+  }
+  to {
+      margin-left: 0px;
+  }
+}
+
+@keyframes moveList {
+  from {
+      margin-left: -5000px;
+  }
+  to {
+      margin-left: 0px;
+  }
+}

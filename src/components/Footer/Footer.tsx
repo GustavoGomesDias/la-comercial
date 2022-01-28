@@ -12,7 +12,7 @@ export const Footer = (): JSX.Element => {
   return (
     <Flex
       borderTop="5px solid #b3b3b3"
-      mt={isSmallScreen ? "100px" : "200px"}
+      mt={isSmallScreen ? "100px" : "100px"}
       bgGradient="linear(to-br, #c8242c, #d31b1f)"
       flexDir="column"
       alignItems="center"
@@ -22,16 +22,15 @@ export const Footer = (): JSX.Element => {
         templateColumns={isSmallScreen ? "none" : 'repeat(3, 1fr)'}
         templateRows={isSmallScreen ? 'repeat(3, 0.5fr)' : 'none'}
         my="3em"
-        gap={8}
+        gap={isSmallScreen ? 1 : 8}
         w={isSmallScreen ? "100%" : "90%"}
       >
         <Flex>
-          <Flex w={isSmallScreen ? "100%" : "90%"} alignItems="center" justifyContent="center">
+          <Flex w={isSmallScreen ? "100%" : "90%"} h={isSmallScreen ? "80%" : "auto"} alignItems="center" justifyContent="center">
             <Image
               src="/images/svgs/logo-footer.svg"
               h="200px"
               w="200px"
-              top="0"
               alt='L&A Comercial Logo'
             />
           </Flex>

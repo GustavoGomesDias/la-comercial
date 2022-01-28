@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { RefObject, useRef } from 'react';
 import { useMediaQuery } from '@chakra-ui/react';
 import { Header, Banner, Footer, Products } from '../index';
@@ -7,18 +7,17 @@ import { useState } from 'react';
 import { Difference } from '../Difference/Diferremce';
 import Carousel from '../Carousel/Carousel';
 import { HomeContent } from '../Home/Content';
+import useIsVisible from '../../hooks/useIsVisible';
 
 const SPA = (): JSX.Element => {
   const [isSmallScreen] = useMediaQuery('(max-width: 768px)');
   const [previewOffsetTop, setPreviewOffsetTop] = useState<number>(0);
+  const [isAboutVisible, setIsAboutVisible] = useState<boolean>(false);
+
   const handleScroll = (ref: RefObject<HTMLDivElement>) => {
 
     if (isSmallScreen) {
       setPreviewOffsetTop(ref.current.offsetTop);
-      console.log(ref.current.offsetTop);
-      console.log(previewOffsetTop);
-      console.log(window.innerHeight);
-
       let offsetTop: number;;
       if (ref.current.offsetTop < previewOffsetTop) {
         offsetTop = -(previewOffsetTop - ref.current.offsetTop);
